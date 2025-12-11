@@ -15,19 +15,90 @@ export interface CaregiverProfile {
   services: string[];
 }
 
+// Australian cities and towns with state abbreviations for URL structure
 export const caregiverLocations = [
-  'sydney',
-  'melbourne', 
-  'brisbane',
-  'perth',
-  'adelaide',
-  'canberra',
-  'darwin',
-  'hobart'
+  // New South Wales
+  'sydney-nsw',
+  'newcastle-nsw',
+  'wollongong-nsw',
+  'central-coast-nsw',
+  'maitland-nsw',
+  'tamworth-nsw',
+  'albury-nsw',
+  'wahroonga-nsw',
+  'parramatta-nsw',
+  'liverpool-nsw',
+  'blacktown-nsw',
+  'campbelltown-nsw',
+  
+  // Victoria
+  'melbourne-vic',
+  'geelong-vic',
+  'ballarat-vic',
+  'bendigo-vic',
+  'la-trobe-vic',
+  'mildura-vic',
+  'shepparton-vic',
+  'werribee-vic',
+  'sunshine-vic',
+  'st-albans-vic',
+  'richmond-vic',
+  'brunswick-vic',
+  
+  // Queensland
+  'brisbane-qld',
+  'gold-coast-qld',
+  'sunshine-coast-qld',
+  'townsville-qld',
+  'cairns-qld',
+  'toowoomba-qld',
+  'mackay-qld',
+  'rockhampton-qld',
+  'gladstone-qld',
+  'bundaberg-qld',
+  'ipswich-qld',
+  'logan-qld',
+  
+  // Western Australia
+  'perth-wa',
+  'bunbury-wa',
+  'geraldton-wa',
+  'kalgoorlie-wa',
+  'mandurah-wa',
+  'alice-springs-wa',
+  'port-hedland-wa',
+  'albany-wa',
+  'rockingham-wa',
+  'karratha-wa',
+  
+  // South Australia
+  'adelaide-sa',
+  'mount-gambier-sa',
+  'whyalla-sa',
+  'murray-bridge-sa',
+  'port-pirie-sa',
+  'port-lincoln-sa',
+  'victor-harbor-sa',
+  'tanunda-sa',
+  'norwood-sa',
+  'unley-sa'
+  
+  // Australian Capital Territory
+  'canberra-act',
+  
+  // Northern Territory
+  'darwin-nt',
+  'alice-springs-nt',
+  
+  // Tasmania
+  'hobart-tas',
+  'launceston-tas',
+  'devonport-tas',
+  'burnie-tas'
 ];
 
 export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
-  sydney: [
+  'sydney-nsw': [
     {
       id: 'sarah-johnson-1',
       name: 'Sarah Johnson',
@@ -35,7 +106,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Dedicated aged care professional with over 8 years of experience providing compassionate support to seniors in the comfort of their own homes. Specializes in dementia care and mobility assistance.',
       experience: '8+ years',
       specialties: ['Dementia Care', 'Mobility Assistance', 'Medication Management', 'Meal Preparation'],
-      location: 'sydney',
+      location: 'sydney-nsw',
       availability: 'Full-time, Mon-Fri',
       rating: 4.9,
       reviewCount: 127,
@@ -50,7 +121,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Experienced disability support specialist committed to empowering individuals with disabilities to achieve their goals and maintain independence. Certified in complex care needs.',
       experience: '6+ years',
       specialties: ['Disability Support', 'Complex Care', 'Community Access', 'Life Skills Training'],
-      location: 'sydney',
+      location: 'sydney-nsw',
       availability: 'Part-time, Flexible',
       rating: 4.8,
       reviewCount: 89,
@@ -66,7 +137,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Qualified mental health professional with extensive experience supporting individuals with mental health challenges. Passionate about promoting wellbeing and recovery.',
       experience: '5+ years',
       specialties: ['Mental Health', 'Anxiety Support', 'Depression Care', 'Crisis Intervention'],
-      location: 'sydney',
+      location: 'sydney-nsw',
       availability: 'Full-time',
       rating: 4.9,
       reviewCount: 156,
@@ -75,7 +146,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       services: ['Emotional Support', 'Life Coaching', 'Community Integration', 'Crisis Support']
     }
   ],
-  melbourne: [
+  'melbourne-vic': [
     {
       id: 'david-rodriguez-4',
       name: 'David Rodriguez',
@@ -83,7 +154,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Compassionate aged care specialist with a background in nursing. Experienced in providing high-quality care for seniors with complex health needs.',
       experience: '10+ years',
       specialties: ['Aged Care', 'Complex Health Needs', 'Wound Care', 'Pain Management'],
-      location: 'melbourne',
+      location: 'melbourne-vic',
       availability: 'Full-time, Weekends',
       rating: 4.8,
       reviewCount: 203,
@@ -98,7 +169,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Experienced disability support coordinator who works collaboratively with clients and their families to develop personalized care plans and achieve life goals.',
       experience: '7+ years',
       specialties: ['Disability Support', 'Plan Coordination', 'Advocacy', 'Family Support'],
-      location: 'melbourne',
+      location: 'melbourne-vic',
       availability: 'Part-time, Evenings',
       rating: 4.9,
       reviewCount: 134,
@@ -107,7 +178,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       services: ['Plan Management', 'Advocacy', 'Family Liaison', 'Goal Setting']
     }
   ],
-  brisbane: [
+  'brisbane-qld': [
     {
       id: 'james-williams-6',
       name: 'James Williams',
@@ -115,7 +186,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Friendly community care worker who believes in building meaningful relationships with clients. Specializes in rural and remote area support.',
       experience: '4+ years',
       specialties: ['Community Care', 'Rural Support', 'Transport', 'Social Activities'],
-      location: 'brisbane',
+      location: 'brisbane-qld',
       availability: 'Flexible Hours',
       rating: 4.7,
       reviewCount: 76,
@@ -124,7 +195,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       services: ['Transport', 'Social Support', 'Shopping', 'Recreation']
     }
   ],
-  perth: [
+  'perth-wa': [
     {
       id: 'amanda-brown-7',
       name: 'Amanda Brown',
@@ -132,7 +203,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Compassionate palliative care specialist with specialized training in end-of-life support. Provides comfort and dignity during difficult times.',
       experience: '9+ years',
       specialties: ['Palliative Care', 'End-of-Life Support', 'Family Counseling', 'Comfort Care'],
-      location: 'perth',
+      location: 'perth-wa',
       availability: 'On-call, 24/7',
       rating: 5.0,
       reviewCount: 167,
@@ -142,7 +213,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       services: ['Palliative Care', 'Family Support', 'Comfort Care', 'Bereavement Support']
     }
   ],
-  adelaide: [
+  'adelaide-sa': [
     {
       id: 'robert-smith-8',
       name: 'Robert Smith',
@@ -150,7 +221,7 @@ export const sampleCaregivers: Record<string, CaregiverProfile[]> = {
       description: 'Experienced rehabilitation support specialist who works with clients recovering from injury or illness. Focuses on rebuilding independence and confidence.',
       experience: '6+ years',
       specialties: ['Rehabilitation', 'Injury Recovery', 'Physiotherapy Support', 'Mobility Training'],
-      location: 'adelaide',
+      location: 'adelaide-sa',
       availability: 'Full-time',
       rating: 4.8,
       reviewCount: 98,
@@ -167,7 +238,7 @@ export const locationPageContent: Record<string, {
   description: string;
   seoFooterContent: string;
 }> = {
-  sydney: {
+  'sydney-nsw': {
     title: 'Aged Care & Disability Support Services in Sydney | Professional Caregivers',
     description: 'Find qualified, experienced caregivers in Sydney offering personalized aged care, disability support, and specialized care services. Professional, compassionate, and reliable.',
     seoFooterContent: `Looking for professional aged care and disability support services in Sydney? Our network of qualified caregivers provides comprehensive, personalized care solutions for seniors and individuals with disabilities across the greater Sydney metropolitan area.
@@ -180,7 +251,7 @@ Our Sydney team includes registered aged care specialists, certified disability 
 
 Choosing the right care provider is an important decision, and we\'re committed to helping you find the perfect match from our network of experienced Sydney caregivers. Contact us today to learn more about our services and how our professional caregivers can support you or your loved one in maintaining independence, dignity, and quality of life in Sydney.`
   },
-  melbourne: {
+  'melbourne-vic': {
     title: 'Trusted Caregivers & Support Workers in Melbourne | Aged Care & Disability Services',
     description: 'Discover experienced, compassionate caregivers in Melbourne providing professional aged care, disability support, and specialized health services. Find the right care for your needs.',
     seoFooterContent: `Our Melbourne caregivers provide exceptional aged care and disability support services throughout Melbourne and surrounding suburbs. With a focus on person-centered care, our professional support workers help individuals maintain their independence while receiving the assistance they need to thrive.
@@ -195,7 +266,7 @@ Our Melbourne caregivers offer flexible scheduling options to accommodate varyin
 
 With strong connections to Melbourne\'s healthcare system and community resources, our caregivers can coordinate comprehensive care packages that integrate seamlessly with existing medical treatments and support networks. This collaborative approach ensures continuity of care and optimal outcomes for all clients.`
   },
-  brisbane: {
+  'brisbane-qld': {
     title: 'Professional Caregivers in Brisbane | Aged Care & Disability Support Services',
     description: 'Find experienced, caring professionals in Brisbane offering quality aged care, disability support, and health services. Trusted caregivers serving the greater Brisbane area.',
     seoFooterContent: `Brisbane families trust our professional caregivers for comprehensive aged care and disability support services across the greater Brisbane region. Our experienced team provides personalized care solutions that enable individuals to live safely and comfortably in their own homes while maintaining their independence and dignity.
@@ -210,7 +281,7 @@ With Brisbane\'s growing population of seniors and individuals requiring disabil
 
 Families choosing our Brisbane caregivers benefit from our commitment to transparency, regular communication, and continuous quality improvement. We maintain open lines of communication with clients, families, and healthcare providers to ensure that care plans remain relevant and effective as needs evolve over time.`
   },
-  perth: {
+  'perth-wa': {
     title: 'Expert Caregivers in Perth | Quality Aged Care & Disability Support',
     description: 'Connect with skilled, compassionate caregivers in Perth offering professional aged care, disability services, and specialized health support. Quality care for Western Australian families.',
     seoFooterContent: `Our Perth caregivers provide exceptional aged care and disability support services throughout Western Australia, with a particular focus on the greater Perth metropolitan area and surrounding regions. Understanding the unique needs of Western Australian families, our professional support workers deliver personalized care solutions that respect local lifestyle preferences and cultural diversity.
@@ -225,7 +296,7 @@ We recognize that effective community care requires strong connections with loca
 
 Families throughout Perth and Western Australia trust our caregivers for reliable, compassionate support that enables their loved ones to maintain independence and dignity while receiving professional care in comfortable, familiar surroundings.`
   },
-  adelaide: {
+  'adelaide-sa': {
     title: 'Dedicated Caregivers in Adelaide | Comprehensive Aged Care & Disability Services',
     description: 'Find reliable, professional caregivers in Adelaide providing quality aged care, disability support, and specialized health services. Trusted care for South Australian communities.',
     seoFooterContent: `Adelaide families rely on our dedicated caregivers for comprehensive aged care and disability support services across South Australia. Our professional support workers provide personalized care solutions that enable individuals to maintain their independence and quality of life while receiving the assistance they need in their own homes and communities.
