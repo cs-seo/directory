@@ -1,0 +1,37 @@
+{
+  "name": "@evaustralia/db-schema",
+  "version": "1.0.0",
+  "description": "PostgreSQL database schema and type-safe repositories for evaustralia.com.au",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./migrations": {
+      "import": "./dist/migrations/index.js",
+      "types": "./dist/migrations/index.d.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postgresql",
+    "database",
+    "schema",
+    "ev",
+    "australia",
+    "electric-vehicle"
+  ],
+  "author": "EV Australia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evaustralia/ev-aus-db.git"
+  }
+}
