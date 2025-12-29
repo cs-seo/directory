@@ -10,7 +10,11 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "db:migrate": "npx tsx scripts/run-migrations.ts",
+    "db:seed": "npx tsx scripts/run-seed.ts",
+    "db:reset": "npx tsx scripts/reset-db.ts",
+    "db:test": "npx tsx scripts/test-db.ts"
   },
   "dependencies": {
     "next": "14.2.33",
@@ -38,6 +42,7 @@
     "postcss": "^8",
     "prettier": "^3.7.4",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }
